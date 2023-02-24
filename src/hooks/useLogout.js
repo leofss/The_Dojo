@@ -13,7 +13,6 @@ export const useLogout = () => {
     setIsPending(true)
 
     try {
-      console.log('hey')
       //update online status
       const {uid} = user
 
