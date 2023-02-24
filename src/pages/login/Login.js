@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Navbar from '../../components/Navbar'
 import {useLogin} from '../../hooks/useLogin'
 
 export default function Login() {
@@ -14,7 +13,6 @@ export default function Login() {
 
   return (
     <div>
-        <Navbar/>
         <form onSubmit={handleSubmit} className="auth-form">
           <h2>login</h2>
           <label>

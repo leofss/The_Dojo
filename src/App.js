@@ -8,6 +8,7 @@ import Signup from './pages/signup/Signup';
 import Project from './pages/project/Project';
 import Sidebar from './components/Sidebar';
 import OnlineUsers from './components/OnlineUsers';
+import Navbar from './components/Navbar';
 
 function App() {
   const { user, authIsReady } = useAuthContext()
@@ -18,6 +19,7 @@ function App() {
         <BrowserRouter>
           {user && <Sidebar/>}
           <div className='container'>
+            <Navbar/>
             <Switch>
               <Route exact path="/">
                 {!user && <Redirect to="/login" />}

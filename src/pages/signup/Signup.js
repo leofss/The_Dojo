@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Navbar from '../../components/Navbar'
 import { useSignup } from '../../hooks/useSignup'
 // styles
 import './Signup.css'
@@ -38,7 +37,6 @@ export default function Signup() {
 
   return (
     <div>
-      <Navbar/>
       <form onSubmit={handleSubmit} className="auth-form">
         <h2>sign up</h2>
         <label>
