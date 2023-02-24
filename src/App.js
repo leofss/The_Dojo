@@ -7,6 +7,7 @@ import Login from './pages/login/Login';
 import Signup from './pages/signup/Signup';
 import Project from './pages/project/Project';
 import Sidebar from './components/Sidebar';
+import OnlineUsers from './components/OnlineUsers';
 
 function App() {
   const { user, authIsReady } = useAuthContext()
@@ -15,7 +16,7 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          <Sidebar/>
+          {user && <Sidebar/>}
           <div className='container'>
             <Switch>
               <Route exact path="/">
@@ -52,6 +53,7 @@ function App() {
               </Route>
             </Switch>
           </div>
+          {user && <OnlineUsers/>}
         </BrowserRouter>
       )}
   </div>
