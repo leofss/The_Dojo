@@ -3,6 +3,7 @@ import { useDocument } from '../../hooks/useDocument'
 import ProjectSummary from './ProjectSummary'
 // styles
 import './Project.css'
+import ProjectComments from "./ProjectComment"
 
 export default function Project() {
   const { id } = useParams()
@@ -18,6 +19,7 @@ export default function Project() {
   return (
     <div className="project-details">
       <ProjectSummary project={document}/>
+      <ProjectComments/>
     </div>
   )
 }
